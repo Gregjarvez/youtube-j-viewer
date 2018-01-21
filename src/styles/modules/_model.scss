@@ -1,0 +1,93 @@
+.model {
+  flex-basis: 45%;
+  margin-left: 1.1rem;
+
+  &--panel {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background: #eee;
+    margin-right: .3rem;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  &--path {
+    padding-left: 20px;
+
+    &-value {
+      background: #F8F8F8;
+      color: $primary-text-heading;
+      letter-spacing: 1.1px;
+      font-size: 12px;
+    }
+  }
+
+  &--icongroup {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--inline {
+    display: inline-block;
+    width: -30px;
+  }
+
+  &--key {
+    text-align: left;
+    font-size: $key-value-font;
+    font-weight: 600;
+
+  }
+
+  &--value {
+    text-align: left;
+    padding-left: .6em;
+    font-size: $key-value-font;
+    font-weight: 400;
+
+    &-string {
+      color: $dummy-green;
+      text-align: justify;
+      padding-left: .7rem;
+      word-break: break-all;
+    }
+
+    &-number {
+      color: $number-blue;
+    }
+
+    &-array {
+      color: $light-silver;
+      font-size: 14px;
+    }
+
+    &-object {
+      @extend .model--value-array;
+      margin-left: .4rem;
+    }
+  }
+
+  &--arrow {
+    display: inline-block;
+    padding: .25em;
+    margin-right: 1em;
+    border: 2px solid $been-edited;
+    border-top: 0;
+    border-left: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &--arrowdown {
+    @extend .model--arrow;
+    transform: rotate(45deg);
+  }
+
+  &--arrowright {
+    @extend .model--arrow;
+    transform: rotate(-45deg);
+  }
+}

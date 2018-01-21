@@ -1,0 +1,77 @@
+.layout {
+  position: relative;
+  padding: 2px;
+  border: 2px solid #eee;
+  height: 660px;
+  box-sizing: border-box;
+  flex-basis: 48%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  &--isError {
+    border: 2px solid $isError;
+  }
+
+  &--embedded {
+    margin-top: 3em;
+  }
+
+  &--container {
+    height: 650px;
+    width: 100%;
+    position: absolute;
+    overflow-y: scroll;
+    z-index: 8;
+  }
+
+  &--errorhandler {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: -1;
+    background: $isError;
+    width: 60%;
+    padding: 0.3rem;
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    transform: translateX(-30%);
+    transition: top 400ms ease;
+    opacity: 0;
+
+    &:first-of-type {
+      display: none;
+    }
+
+    &-showing {
+      top: 49px;
+      opacity: 1;
+      box-shadow: inset 5px 5px 10px 0px rgba(#000, 0.2)
+    }
+  }
+
+  &--setting {
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+    background: #2C3E50;
+    box-sizing: border-box;
+  }
+
+  &--text {
+    font-size: .875em;
+    padding: 7px;
+    margin-right: 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #2C3E50;
+    cursor: pointer;
+  }
+
+  &--row {
+    width: 100%;
+    padding: .3rem;
+
+  }
+}

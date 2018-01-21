@@ -1,0 +1,1 @@
+import constants from '../constants';const editorReducer = (state = '', action) => {  switch (action.type) {    case constants.SET_JSON:      return action.payload;    default:      return state  }};export default editorReducer;
