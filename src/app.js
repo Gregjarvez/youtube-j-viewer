@@ -1,5 +1,6 @@
 import React from 'react';
-import Editor from './container/editor';
+import Editor from './container/Editor';
+import Modeler from './container/Modeler';
 import './styles/style.scss'
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <div className="container">
       <div className="app">
         <Editor />
+        <Modeler />
       </div>
     </div>
   )
