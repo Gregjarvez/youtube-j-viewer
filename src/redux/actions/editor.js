@@ -1,1 +1,1 @@
-import constants from '../constants'export const setJson = json => ({  type: constants.SET_JSON,  payload: json});
+import constants from '../constants'export const setJson = json => ({  type: constants.SET_JSON,  payload: json});export const formatJson = () => ({  type: constants.FORMAT_JSON});
